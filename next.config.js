@@ -15,22 +15,14 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year
   },
 
+  // Output configuration for static export
+  output: 'standalone',
+  
   // Experimental features for performance
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   
-  // Turbopack configuration (stable in Next.js 15)
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-  },
-
   // Security headers
   async headers() {
     return [
@@ -112,11 +104,8 @@ const nextConfig = {
       };
     }
 
-    // Remove custom image-webpack-loader rule
-    // (No custom image optimization here, let Next.js handle it)
-
     return config;
   },
 };
 
-module.exports = withNextIntl(nextConfig); 
+module.exports = withNextIntl(nextConfig);
