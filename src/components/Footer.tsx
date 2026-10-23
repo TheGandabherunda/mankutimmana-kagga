@@ -175,7 +175,48 @@ export const Footer: React.FC = () => {
             </span>
           </div>
         </div>
+
+        {/* Subtle Creator Attribution */}
+        <div
+          style={{
+            marginTop: 20,
+            paddingTop: 16,
+            borderTop: '1px solid var(--border-subtle)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            fontSize: '0.82rem',
+            color: 'var(--text-muted)',
+          }}
+        >
+          <p style={{ margin: 0, lineHeight: 1.6 }}>
+            Made with{' '}
+            <span
+              style={{
+                color: 'var(--accent-terracotta)',
+                display: 'inline-block',
+                margin: '0 2px',
+              }}
+              aria-label="love"
+              role="img"
+            >
+              ♥
+            </span>{' '}
+            by{' '}
+            <a
+              href="https://github.com/TheGandabherunda"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-creator-link"
+              aria-label="TheGandabherunda on GitHub (opens in a new tab)"
+            >
+              TheGandabherunda
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
 };
+
