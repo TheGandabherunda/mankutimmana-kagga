@@ -1,0 +1,127 @@
+export interface TranslationSchema {
+  common: {
+    siteTitle: string;
+    siteSubtitle: string;
+    author: string;
+    searchPlaceholder: string;
+    searchAriaLabel: string;
+    languageName: string;
+    otherLanguage: string;
+    themeMode: string;
+    light: string;
+    dark: string;
+    system: string;
+    close: string;
+    back: string;
+    loading: string;
+    notFound: string;
+  };
+  nav: {
+    reflect: string;
+    explore: string;
+    bookmarks: string;
+    about: string;
+    api: string;
+    search: string;
+  };
+  home: {
+    welcomeBadge: string;
+    heroTitle: string;
+    heroSubtitle: string;
+    heroIntro: string;
+    dailyKaggaTitle: string;
+    dailyKaggaBadge: string;
+    exploreButton: string;
+    randomButton: string;
+    themesTitle: string;
+    themesSubtitle: string;
+    featuresTitle: string;
+    readMore: string;
+  };
+  explore: {
+    title: string;
+    subtitle: string;
+    filterByTheme: string;
+    allThemes: string;
+    resultsCount: string;
+    noResults: string;
+    noResultsTip: string;
+    clearFilter: string;
+    page: string;
+    of: string;
+    previous: string;
+    next: string;
+    searchHint: string;
+  };
+  reader: {
+    verseTitle: string;
+    originalVerse: string;
+    transliteration: string;
+    englishMeaning: string;
+    englishMeaningNote: string;
+    kannadaMeaning: string;
+    kannadaMeaningMissing: string;
+    themesLabel: string;
+    copyVerse: string;
+    copyTranslit: string;
+    copyMeaningEn: string;
+    copyMeaningKn: string;
+    copyAll: string;
+    copied: string;
+    bookmark: string;
+    bookmarked: string;
+    share: string;
+    prevVerse: string;
+    nextVerse: string;
+    backToExplore: string;
+  };
+  bookmarks: {
+    title: string;
+    subtitle: string;
+    emptyTitle: string;
+    emptyMessage: string;
+    browseButton: string;
+    clearAll: string;
+    confirmClear: string;
+    count: string;
+  };
+  about: {
+    title: string;
+    subtitle: string;
+    dvgBioTitle: string;
+    dvgBio: string;
+    workTitle: string;
+    workDescription: string;
+    provenanceTitle: string;
+    provenanceText: string;
+    copyrightTitle: string;
+    copyrightText: string;
+    disclaimerTitle: string;
+    disclaimerText: string;
+    openSourceTitle: string;
+    openSourceText: string;
+  };
+  api: {
+    title: string;
+    subtitle: string;
+    overviewTitle: string;
+    overviewText: string;
+    endpointsTitle: string;
+    listEndpointTitle: string;
+    listEndpointDesc: string;
+    singleEndpointTitle: string;
+    singleEndpointDesc: string;
+    randomHelperTitle: string;
+    randomHelperDesc: string;
+    notesTitle: string;
+    notesText: string;
+  };
+  share: {
+    title: string;
+    shareWithFriends: string;
+    copyLink: string;
+    linkCopied: string;
+    nativeShare: string;
+    shareMessage: string;
+  };
+}

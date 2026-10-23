@@ -1,0 +1,113 @@
+/**
+ * Nature-Inspired Color & Typography Tokens
+ * Designed specifically for Kannada literary contemplation
+ */
+
+:root {
+  /* Core Nature-Inspired Palette (Light Theme Defaults) */
+  --bg-app: #F4F0E5;              /* Warm contemplative parchment */
+  --bg-card: #FAF8F2;             /* Grounded card base */
+  --bg-card-hover: #FFFFFF;
+  --bg-card-subtle: #EBE5D8;
+  --text-primary: #1F2E23;        /* Deep forest slate for high contrast */
+  --text-secondary: #536056;      /* Muted contemplative sage */
+  --text-muted: #7A867D;          /* Soft stone */
+  
+  --forest-green: #21452F;        /* Primary literary anchor */
+  --forest-green-hover: #173222;
+  --forest-green-subtle: rgba(33, 69, 47, 0.08);
+  
+  --muted-sage: #E5EAE0;          /* Secondary accent */
+  --sand: #D8C9AA;                /* Border & grounding highlight */
+  --sand-subtle: rgba(216, 201, 170, 0.4);
+  
+  --accent-gold: #B8860B;         /* Restrained verse number gold */
+  --accent-terracotta: #8F2D24;   /* Traditional Kaavi accent */
+
+  --border-subtle: #DFD7C7;       /* Gentle parchment divider */
+  --border-medium: #D0C4AF;
+  --border-focus: #21452F;        /* High-contrast focus outline */
+
+  /* Shadows - gentle, paper-like */
+  --shadow-sm: 0 1px 3px rgba(33, 69, 47, 0.04);
+  --shadow-md: 0 4px 12px rgba(33, 69, 47, 0.06);
+  --shadow-lg: 0 10px 24px rgba(33, 69, 47, 0.08);
+
+  /* Typography scale */
+  --font-kannada: 'Noto Serif Kannada', 'Tunga', 'Kailasa', 'Arial Unicode MS', serif;
+  --font-body: 'Lora', 'Georgia', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
+
+  /* Line heights & spacing */
+  --lh-kannada: 1.85;             /* Crucial for Kannada ottakshara legibility */
+  --lh-prose: 1.7;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Header height */
+  --header-height: 72px;
+}
+
+/* Explicit Dark Theme */
+[data-theme="dark"] {
+  --bg-app: #171C19;              /* Deep earthen night */
+  --bg-card: #222923;             /* Grounded slate card */
+  --bg-card-hover: #2B332C;
+  --bg-card-subtle: #1C231E;
+  --text-primary: #E8E5D9;        /* Warm parchment white */
+  --text-secondary: #C0C5BA;      /* Soft sage ash */
+  --text-muted: #8E968B;
+  
+  --forest-green: #C5D6BF;        /* Luminous sage for dark mode */
+  --forest-green-hover: #DFEAD9;
+  --forest-green-subtle: rgba(197, 214, 191, 0.12);
+  
+  --muted-sage: #2A332B;
+  --sand: #4A564C;
+  --sand-subtle: rgba(74, 86, 76, 0.5);
+  
+  --accent-gold: #D4AF37;
+  --accent-terracotta: #D07062;
+
+  --border-subtle: #39433B;       /* Deep divider */
+  --border-medium: #4B574D;
+  --border-focus: #C5D6BF;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* System preference fallback when mode is "system" */
+@media (prefers-color-scheme: dark) {
+  [data-theme="system"] {
+    --bg-app: #171C19;
+    --bg-card: #222923;
+    --bg-card-hover: #2B332C;
+    --bg-card-subtle: #1C231E;
+    --text-primary: #E8E5D9;
+    --text-secondary: #C0C5BA;
+    --text-muted: #8E968B;
+    
+    --forest-green: #C5D6BF;
+    --forest-green-hover: #DFEAD9;
+    --forest-green-subtle: rgba(197, 214, 191, 0.12);
+    
+    --muted-sage: #2A332B;
+    --sand: #4A564C;
+    --sand-subtle: rgba(74, 86, 76, 0.5);
+    
+    --accent-gold: #D4AF37;
+    --accent-terracotta: #D07062;
+
+    --border-subtle: #39433B;
+    --border-medium: #4B574D;
+    --border-focus: #C5D6BF;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.5);
+  }
+}
