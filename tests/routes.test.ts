@@ -1,10 +1,26 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
 const distDir = path.resolve(__dirname, '../dist');
 
 describe('Static Build Artifacts & Route Validation', () => {
+  beforeAll(() => {
+    // If static build artifacts are missing, build them automatically
+    if (!fs.existsSync(distDir) || !fs.existsSync(path.join(distDir, 'api/v1/kaggas.json'))) {
+      execSync('npm run build', {
+        cwd: path.resolve(__dirname, '..'),
+        stdio: 'pipe',
+        env: {
+          ...process.env,
+          VITE_BASE_PATH: process.env.VITE_BASE_PATH || '/mankutimmana-kagga/',
+          SITE_URL: process.env.SITE_URL || 'https://thegandabherunda.github.io/mankutimmana-kagga',
+        },
+      });
+    }
+  });
+
   it('has generated the static JSON API files', () => {
     expect(fs.existsSync(path.join(distDir, 'api/v1/kaggas.json'))).toBe(true);
     expect(fs.existsSync(path.join(distDir, 'api/v1/kaggas-all.json'))).toBe(true);

@@ -35,6 +35,12 @@ jobs:
       - name: Run TypeScript type-check
         run: npm run type-check
 
+      - name: Build application & static assets
+        run: npm run build
+        env:
+          VITE_BASE_PATH: '/${{ github.event.repository.name || 'mankutimmana-kagga' }}/'
+          SITE_URL: 'https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name || 'mankutimmana-kagga' }}'
+
       - name: Run Vitest automated test suite
         run: npm test
 
@@ -61,8 +67,8 @@ jobs:
       - name: Build application & static assets
         run: npm run build
         env:
-          VITE_BASE_PATH: '/${{ github.event.repository.name }}/'
-          SITE_URL: 'https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}'
+          VITE_BASE_PATH: '/${{ github.event.repository.name || 'mankutimmana-kagga' }}/'
+          SITE_URL: 'https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name || 'mankutimmana-kagga' }}'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
